@@ -40,25 +40,24 @@ sonuc.hist(color='green')
 sonuc.plot.scatter(x='boy',y='kilo')
 plt.title('Purchase Week Vs Price Per User Class Based on Tx') 
 '''
+'''
 #first figure
 plt.figure(1)
 plt.plot(sonuc)
 plt.title('Sonuc Verileri')
 plt.xlabel('x-axis')
 plt.ylabel('y-axis')
-
 #second figure
 plt.figure(2)
 plt.subplot(sonuc)
-
-
-
-
-
-
-
-
-
-
-
-
+'''
+fig,ax = plt.subplots()
+#ax.scatter(sonuc['boy'],sonuc['kilo'])
+#ax.plot(sonuc)
+ax.hist(sonuc['boy'])
+ax.hist([])
+#ax.bar(sonuc['boy'],sonuc['kilo'])
+# set a title and labels
+ax.set_title('Sonuc Boy Kilo Verileri')
+ax.set_xlabel('Boy')
+ax.set_ylabel('Kilo')
